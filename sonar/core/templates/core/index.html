@@ -11,23 +11,13 @@
 			<div class="sidebar-top">
 				<a href="/"><img src="{% static 'icons/tape.svg' %}"></a>
 				<a href="#"><img src="{% static 'icons/message.svg' %}"></a>
-				<a href=""><img src="{% static 'icons/match.svg' %}"></a>
+				<a href="/matches"><img src="{% static 'icons/match.svg' %}"></a>
 			</div>
 			<div>
 				<a href="#"><img src="{% static 'icons/gear.svg' %}"></a>
         	</div>	
 		</div>
-		<div id="card-holder">
-			
-		</div>
-		<div class="buttons">
-			<button id="decline">
-				<img src="{% static 'icons/decline.svg' %}">
-			</button>
-			<button id="accept">
-				<img src="{% static 'icons/accept.svg' %}">
-			</button>
-		</div>
-		<script src="{% static 'scripts/index.js' %}" type="module"></script>
+        {% block content %}
+        {% endblock %}
     </body>
 </html>

@@ -1,8 +1,9 @@
 from django.urls import path
-from . import views
+from .views import collide, main, matches, SuggestionsView
 
 urlpatterns = [
-    path('', views.main),
-    path('suggestions', views.SuggestionsView.as_view()),
-    path('collide', views.collide, name='collide')
+    path('collide', collide, name='collide'),
+    path('suggestions/', SuggestionsView.as_view()),
+    path('matches', matches),
+    path('', main)
 ]

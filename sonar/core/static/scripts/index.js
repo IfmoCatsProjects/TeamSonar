@@ -124,7 +124,7 @@ function decceptGet(acc) {
         'accept': acc.toString(),
         'viewed_id': globalData[i].id.toString()
     });
-    fetch("collide?".concat(params), {
+    fetch('/collide' + '?' + params.toString(), {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'

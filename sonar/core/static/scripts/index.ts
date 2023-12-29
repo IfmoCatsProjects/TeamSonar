@@ -92,7 +92,7 @@ function decceptGet(acc: boolean) {
     'viewed_id': globalData[i].id.toString()
   });
 
-  fetch(`collide?${params}`, {
+  fetch('/collide' + '?' + params.toString(), {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
@@ -111,7 +111,6 @@ function decceptGet(acc: boolean) {
       console.error('ERROR:', err.message);
     });
 }
-
 
 if (acc) acc.onclick = () => {
 	decceptGet (true);

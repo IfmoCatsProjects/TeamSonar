@@ -1,0 +1,12 @@
+{% extends 'auth/auth.html' %}
+{% block content %}
+    <form action="login-action" method="post">
+        {% csrf_token %}
+        <label for="id_username">Username</label>
+        <input id="id_username" type="text" name="username">
+        <label for="id_password">Password</label>
+        <input id="id_password" type="password" name="password">
+        <button type="submit">Авторизоваться</button>
+    </form>
+    <a href="reg">Нет аккаунта?</a>
+{% endblock %}
